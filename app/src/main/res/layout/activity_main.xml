@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3">
+
+        <TextureView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/image_view"
+            android:background="#BDBDBD"
+            />
+        <com.example.andrew.thermal_cam.ThermalView2
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ThermalView2"
+            android:alpha="0.5"
+            />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="6">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/spinner"
+                android:layout_weight="4"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <Button
+                    android:text="Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnCam"
+                    android:layout_weight="1"
+                    android:onClick="onBtnClick"/>
+            </LinearLayout>
+
+            <TextView
+                android:text="**"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lblTempTrg"
+                android:layout_weight="4"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/sbAlpha"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:text="100"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lblAlpha"
+                android:layout_weight="7"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/sbTempMax"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:text="100"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lblTempMax"
+                android:layout_weight="7"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/sbTempMin"
+                android:max="170"
+                android:progress="50"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:text="100"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lblTempMin"
+                android:layout_weight="7"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="6">
+
+            <TextView
+                android:text="100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblStat1"
+                android:layout_gravity="center"
+                android:textSize="10sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
